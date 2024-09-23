@@ -3,28 +3,8 @@ require 'vendor/autoload.php';
 
 use Telegram\Bot\Api;
 use Telegram\Bot\Keyboard\Keyboard;
-use Dotenv\Dotenv;
 
-// Load the .env file
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-// Get the bot token from the .env file
-$bot_token = getenv('BOT_TOKEN');
-
-if (!$bot_token) {
-    die('Error: BOT_TOKEN not set in environment.');
-}
-
-$telegram = new Api($bot_token);
-
-$bot_token = getenv('BOT_TOKEN');
-
-// Check if the bot token is available
-if (!$bot_token) {
-    die('Error: BOT_TOKEN not set in environment.');
-}
-
-$telegram = new Api($bot_token);
+$telegram = new Api('8041464661:AAHJenRmBlSonPWj1RWA1ZV-3lJak8L2Wkk');
 
 $update = $telegram->getWebhookUpdate();
 
